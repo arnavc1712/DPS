@@ -103,7 +103,6 @@ def ParallelJoin (InputTable1, InputTable2, Table1JoinColumn, Table2JoinColumn, 
         count+=part_counts 
         table1_output_table = table1_range_partition+str(i)
         table2_output_table = table2_range_partition+str(i)
-        print(lower_val,upper_val)
         create_range_partitions(InputTable1,Table1JoinColumn,table1_output_table,lower_val,upper_val,i,openconnection)
         create_range_partitions(InputTable2,Table2JoinColumn,table2_output_table,lower_val,upper_val,i,openconnection)
 
